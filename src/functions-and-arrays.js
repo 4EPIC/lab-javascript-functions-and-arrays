@@ -38,12 +38,12 @@ function sumNumbers(numbers) {
 function sum(someVal) {
   if (!someVal) return 0;
   let sum = 0;
-  for (let el of someVal) {
-    if (typeof el === 'object') {
+  for (let element of someVal) {
+    if (typeof element === 'object') {
       throw new Error("Unsupported data type sir or ma'am");
     }
-    if (typeof el === 'string') sum += el.length;
-    else sum += el;
+    if (typeof element === 'string') sum += element.length;
+    else sum += element;
   }
   return sum;
 }
@@ -75,10 +75,10 @@ const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smar
  };
 
 // Bonus - Iteration #4.1
-function avg(arr) {
-  if (arr.length === 0) return null;
-  const pepe = (sum(arr) / arr.length).toFixed(2);
-  return Number(pepe);
+function avg(array) {
+  if (array.length === 0) return null;
+  const averageNumber = (sum(array) / array.length).toFixed(2);
+  return Number(averageNumber);
 }
 
 // Iteration #5: Unique arrays
